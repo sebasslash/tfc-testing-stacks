@@ -18,6 +18,10 @@ variable "instances" {
   type = number
 }
 
+variable "upstream_stack_id" {
+  type = string
+}
+
 provider "null" "main" {}
 
 provider "random" "main" {}

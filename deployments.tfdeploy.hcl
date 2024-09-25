@@ -13,11 +13,11 @@ deployment "many" {
   inputs = {
     prefix    = "many"
     instances = 10
-    other_id  = upstream_input.other.id
+    upstream_stack_id = upstream_input.upstream_stack.id
   }
 }
 
-upstream_input "other" {
+upstream_input "upstream_stack" {
   type = "stack"
-  source = "host-name/org-name/project-name/other"
+  source = "host-name/org-name/project-name/upstream-stack"
 }
