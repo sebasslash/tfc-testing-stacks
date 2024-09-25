@@ -2,6 +2,7 @@ deployment "single" {
   inputs = {
     prefix    = "single"
     instances = 1
+    upstream_stack_id = upstream_input.upstream_stack.id
   }
 }
 
