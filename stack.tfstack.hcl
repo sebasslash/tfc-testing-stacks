@@ -31,6 +31,7 @@ component "pet" {
   source = "./pet"
   inputs = {
     prefix = var.prefix
+    ephemeral_uuid = var.ephemeral_uuid
   }
   providers = {
     random = provider.random.main
