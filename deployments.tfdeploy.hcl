@@ -2,6 +2,7 @@ deployment "single" {
   inputs = {
     prefix    = "single"
     instances = 1
+    ephemeral_uuid = var.ephemeral_uuid
   }
 }
 

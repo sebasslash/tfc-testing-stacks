@@ -18,6 +18,11 @@ variable "instances" {
   type = number
 }
 
+variable "ephemeral_uuid" {
+  type = string
+  ephemeral = true
+}
+
 provider "null" "main" {}
 
 provider "random" "main" {}
