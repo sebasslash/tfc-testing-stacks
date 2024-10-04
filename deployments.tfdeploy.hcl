@@ -7,6 +7,7 @@ deployment "single" {
 
 deployment "many" {
   inputs = {
+    prefix    = "many"
     instances = 10
   }
 }
