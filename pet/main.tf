@@ -13,10 +13,11 @@ variable "prefix" {
 
 variable "ephemeral_uuid" {
   type = string
+  ephemeral = true
 }
 
 resource "random_pet" "this" {
-  prefix = join(var.prefix, ["-"], var.ephemeral_uuid)
+  prefix = join([var.prefix, ["-"], var.ephemeral_uuid])
   length = 4
 }
 
