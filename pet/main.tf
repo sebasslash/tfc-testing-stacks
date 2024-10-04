@@ -12,7 +12,7 @@ variable "prefix" {
 }
 
 resource "random_pet" "this" {
-  prefix = var.prefix
+  prefix = join(var.prefix, ["-"], inputs.ephemeral_uuid)
   length = 4
 }
 
