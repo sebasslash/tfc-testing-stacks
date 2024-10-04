@@ -6,19 +6,10 @@ deployment "single" {
   }
 }
 
-publish_output "single" {
-  value = deployment.single.id
-}
-
 deployment "many" {
   inputs = {
-    prefix    = "many"
+    prefix    = upstream_input.my_stack.name
     instances = 10
-    upstream_stack_id = upstream_input.upstream_stack.id
+    my_stack_id = upstream_input.my_stack.id
   }
-}
-
-upstream_input "upstream_stack" {
-  type = "stack"
-  source = "host-name/org-name/project-name/upstream-stack"
 }
