@@ -6,7 +6,7 @@ deployment "single" {
   inputs = {
     prefix    = "single"
     instances = 2
-    ephemeral_uuid = random_id.rand.hex
+    ephemeral_uuid = rand.rand.hex
   }
 }
 
@@ -14,6 +14,6 @@ deployment "many" {
   inputs = {
     prefix    = "many"
     instances = 11
-    ephemeral_uuid = random_id.rand.hex
+    ephemeral_uuid = rand.rand.hex
   }
 }
