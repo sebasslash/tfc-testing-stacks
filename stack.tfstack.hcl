@@ -10,6 +10,9 @@ required_providers {
   }
 }
 
+provider "null" "main" {}
+provider "random" "main" {}
+
 variable "prefix" {
   type = string
 }
@@ -21,11 +24,8 @@ variable "instances" {
 variable "ephemeral_uuid" {
   type = string
   ephemeral = true
+  sensitive = true
 }
-
-provider "null" "main" {}
-
-provider "random" "main" {}
 
 component "pet" {
   source = "./pet"

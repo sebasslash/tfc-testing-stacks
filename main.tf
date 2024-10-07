@@ -7,17 +7,8 @@ terraform {
   }
 }
 
-variable "prefix" {
-  type = string
-}
-
-variable "ephemeral_uuid" {
-  type = string
-  ephemeral = true
-}
-
 resource "random_pet" "this" {
-  prefix = var.prefix
+  prefix = var.ephemeral_uuid
   length = 4
 }
 
