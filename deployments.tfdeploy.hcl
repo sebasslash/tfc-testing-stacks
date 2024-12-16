@@ -20,5 +20,5 @@ deployment "many" {
 
 upstream_input "pet_nulls" {
   type = "stack"
-  source = "localterraform.com/hashicorp/stacks/pet-nulls-stack-parent"
+  source = "localterraform.com/hashicorp/stacks-test/pet-nulls-stack-parent"
 }
