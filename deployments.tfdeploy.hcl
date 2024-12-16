@@ -17,3 +17,8 @@ deployment "many" {
     ephemeral_uuid = identity_token.test.jwt
   }
 }
+
+upstream_input "pet_nulls" {
+  type = "stack"
+  source = "app.terraform.io/hashicorp/stacks/pet-nulls-stack-parent"
+}
