@@ -18,6 +18,14 @@ deployment "many" {
   }
 }
 
+deployment "complex" {
+  inputs = {
+    prefix    = "complex"
+    instances = 1
+    other_id  = upstream_input.pet_nulls.ids_from_complex
+  }
+}
+
 upstream_input "pet_nulls" {
   type = "stack"
   source = "localterraform.com/hashicorp/stacks-test/pet-nulls-stack-parent"
