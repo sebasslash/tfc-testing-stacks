@@ -28,5 +28,5 @@ deployment "complex" {
 
 upstream_input "pet_nulls" {
   type = "stack"
-  source = "localterraform.com/hashicorp/stacks-test/pet-nulls-stack-parent"
+  source = "tfcdev-3f4ca3c8.ngrok.app/hashicorp/stacks-test/pet-nulls-stack-parent"
 }
